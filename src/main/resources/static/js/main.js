@@ -132,4 +132,20 @@ jQuery(document).ready(function ($) {
         $("#to2").click();
     });
 
+    const target = $(".img-responsive").offset().top + 700;
+    let beyond = $("#advice").offset().top - 800; // Beyond point is dynamic due to different tabs
+    $(window).scroll(function () {
+        if ($(window).scrollTop() >= target && $(window).scrollTop() <= beyond) {
+            $('#goback-to-witness').fadeIn(200);    // Fade in the arrow
+            beyond = $("#advice").offset().top - 800;
+        } else {
+            $('#goback-to-witness').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#goback-to-witness').click(function () {
+        $('body,html').animate({
+            scrollTop: $("#witness").offset().top    // Scroll to top section
+        }, 500);
+    });
+
 });
