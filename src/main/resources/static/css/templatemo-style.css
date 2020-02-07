@@ -1313,7 +1313,7 @@ blockquote:nth-of-type(even) footer:after {
     #featured .owl-nav {
         position: absolute;
         display: inline-block;
-        top: -220px;
+        top: -110px;
         right: 0;
     }
 
@@ -1348,6 +1348,18 @@ blockquote:nth-of-type(even) footer:after {
     #contact-content {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+}
+
+@media (max-width: 339px) {
+
+    .footer {
+        height: 80px;
+    }
+
+    .footer p {
+        line-height: 40px;
     }
 
 }
