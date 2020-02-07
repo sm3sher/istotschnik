@@ -915,7 +915,7 @@ header {
 }
 
 .clearfix img {
-    margin-top: 8px;
+    margin: 8px 0;
 }
 
 img.pull-left {
@@ -1333,7 +1333,7 @@ blockquote:nth-of-type(even) footer:after {
     }
 
     #witness .nav-tabs a {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     #witness .tab-content .text-content {
@@ -1353,6 +1353,10 @@ blockquote:nth-of-type(even) footer:after {
 }
 
 @media (max-width: 339px) {
+
+    #witness .nav-tabs a {
+        font-size: 10px;
+    }
 
     .footer {
         height: 80px;
