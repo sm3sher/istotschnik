@@ -49,15 +49,11 @@ jQuery(document).ready(function ($) {
         responsive: {
             0: {
                 items: 1,
-                nav: true,
-                mouseDrag: false,
-                touchDrag: true
+                nav: true
             },
             600: {
                 items: 2,
-                nav: false,
-                mouseDrag: false,
-                touchDrag: true
+                nav: false
             },
             1000: {
                 items: 3,

@@ -15,10 +15,11 @@
   z-index: 1; }
   .owl-carousel .owl-stage {
     position: relative;
-    -ms-touch-action: pan-Y;
-    touch-action: manipulation;
+    -ms-touch-action: auto;
+    touch-action: auto;
     -moz-backface-visibility: hidden;
-    /* fix firefox animation glitch */ }
+    /* fix firefox animation glitch */
+  }
   .owl-carousel .owl-stage:after {
     content: ".";
     display: block;
@@ -80,12 +81,13 @@
   .owl-carousel.owl-refresh .owl-item {
     visibility: hidden; }
   .owl-carousel.owl-drag .owl-item {
-    -ms-touch-action: none;
-        touch-action: none;
+    -ms-touch-action: auto;
+    touch-action: auto;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; }
+    user-select: none;
+  }
   .owl-carousel.owl-grab {
     cursor: move;
     cursor: grab; }
