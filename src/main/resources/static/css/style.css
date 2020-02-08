@@ -902,6 +902,10 @@ header {
     line-height: 24px;
 }
 
+.bold-text {
+    font-weight: bold;
+}
+
 .clearfix:after {
     content: "";
     display: table;
