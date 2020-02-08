@@ -45,7 +45,6 @@ p {
     font-size: 32px;
     color: #232323;
     display: inline-block;
-    margin-right: 70px;
 }
 
 .section-heading em {
@@ -59,12 +58,15 @@ p {
     font-size: 15px;
     line-height: 26px;
     color: #343434;
+}
+
+.justify-content-start p {
     position: absolute;
     top: 6px;
 }
 
-.two-lines p {
-    top: 12.5px
+.shift-col {
+    margin-left: -12px;
 }
 
 .white-button a {
@@ -210,17 +212,9 @@ header {
     padding: 20px;
 }
 
-.sidebar-navigation .logo a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    height: 100px;
-    width: 100%;
-    display: inline-block;
-    border: 1px solid rgba(250, 250, 250, 0.5);
+.sidebar-navigation .logo img {
+    max-width: 98%;
+    max-height: 100%;
 }
 
 .sidebar-navigation nav {
@@ -1133,10 +1127,6 @@ blockquote:nth-of-type(even) footer:after {
     background-color: #f4f4f4;
 }
 
-#contact-info .col-md-4 {
-    margin-left: -12px;
-}
-
 .alert {
     padding: 10px 35px 10px 14px;
     border-radius: 4px;
@@ -1207,7 +1197,7 @@ blockquote:nth-of-type(even) footer:after {
         font-size: 15px;
     }
 
-    .section-heading p {
+    #contact-info, .section-heading p {
         position: relative;
     }
 
@@ -1279,7 +1269,7 @@ blockquote:nth-of-type(even) footer:after {
         float: left;
     }
 
-    .section-heading p {
+    #contact-info, .section-heading p {
         position: relative;
     }
 

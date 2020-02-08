@@ -102,7 +102,7 @@
                 <li><a href="#top" th:text="#{home}"></a></li>
                 <li><a href="#imggallery" th:text="#{gallery}"></a></li>
                 <li th:if="__#{locale.lang}__=='ru'"><a href="#featured" th:text="#{poems}"></a></li>
-                <li><a href="#video" th:text="#{preach}"></a></li>
+<!--                <li><a href="#video" th:text="#{preach}"></a></li>-->
                 <li><a href="#witness" th:text="#{witness}"></a></li>
                 <li><a href="#advice" th:text="#{advice}"></a></li>
                 <li><a href="#contact" th:text="#{contact}"></a></li>
@@ -113,7 +113,7 @@
 
 <div class="sidebar-navigation hidden-xs">
     <div class="logo">
-        <img alt="" class="" style="max-width: 98%; max-height: 100%" th:src="#{img.path}">
+        <img alt="Istotschnik" th:src="#{img.path}">
     </div>
     <nav>
         <div id="locales">
@@ -151,6 +151,7 @@
                     [[#{poems}]]
                 </a>
             </li>
+            <!--
             <li>
                 <a href="#video" th:inline="text">
                     <span class="rect"></span>
@@ -158,6 +159,7 @@
                     [[#{preach}]]
                 </a>
             </li>
+            -->
             <li>
                 <a href="#witness" th:inline="text">
                     <span class="rect"></span>
@@ -195,7 +197,9 @@
             <div class="img-fill">
                 <div class="image"></div>
                 <div class="info">
-                    <h1 th:text="#{slider1}"></h1>
+                    <h1 th:inline="text">[[#{slider1}]]
+                        <wbr th:text="#{slider1.break}">
+                    </h1>
                     <p th:text="#{slider1.sum}"></p>
                     <div class="white-button button">
                         <a href="#advice1" id="goto1" th:text="#{readmore}"></a>
@@ -222,9 +226,13 @@
 
 <div class="page-content">
     <section class="content-section" id="imggallery">
-        <div class="section-heading">
-            <h1><em th:text="#{img.title1}"></em></h1>
-            <p th:text="#{img.descr1}"></p>
+        <div class="section-heading container-fluid row justify-content-start">
+            <div class="col-lg-4 col-md-5 shift-col">
+                <h1><em th:text="#{img.title1}"></em></h1>
+            </div>
+            <div class="col-lg4 col-md-6 shift-col">
+                <p th:text="#{img.descr1}"></p>
+            </div>
         </div>
         <div class="section-content gallery">
             <a data-lightbox="image" href="img/Galerie/1.jpg" th:attr="data-title=#{img1}"><img alt=""
@@ -270,9 +278,13 @@
         </div>
     </section>
     <section class="content-section" id="featured" th:if="__#{locale.lang}__=='ru'">
-        <div class="section-heading">
-            <h1><em>Поэзия</em></h1>
-            <p th:inline="text">Стихи наших авторов.</p>
+        <div class="section-heading container-fluid row justify-content-start">
+            <div class="col-lg-4 col-md-5 shift-col">
+                <h1><em>Поэзия</em></h1>
+            </div>
+            <div class="col-lg-4 col-md-6 shift-col">
+                <p th:inline="text">Стихи наших авторов.</p>
+            </div>
         </div>
         <div class="section-content">
             <div class="owl-carousel owl-theme">
@@ -365,9 +377,13 @@
     </section>
 -->
     <section class="content-section" id="witness">
-        <div class="section-heading">
-            <h1><em th:text="#{witn.title1}"></em></h1>
-            <p th:inline="text">[[#{witn.descr1}]]</p>
+        <div class="section-heading container-fluid row justify-content-start">
+            <div class="col-lg-4 col-md-5 shift-col">
+                <h1><em th:text="#{witn.title1}"></em></h1>
+            </div>
+            <div class="col-lg-4 col-md-6 shift-col">
+                <p th:inline="text">[[#{witn.descr1}]]</p>
+            </div>
         </div>
         <div class="section-content">
             <div class="tabs-content">
@@ -444,9 +460,13 @@
         </div>
     </section>
     <section class="content-section" id="advice">
-        <div class="section-heading two-lines" th:inline="text">
-            <h1>[[#{adv.title1}]]<br><em th:text="#{adv.title2}"></em></h1>
-            <p th:inline="text">[[#{adv.descr1}]]<br th:text="#{adv.descr2}"></p>
+        <div class="section-heading container-fluid row justify-content-start" th:inline="text">
+            <div class="col-lg-4 col-md-5 shift-col">
+                <h1>[[#{adv.title1}]]<br><em th:text="#{adv.title2}"></em></h1>
+            </div>
+            <div class="col-lg-4 col-md-6 shift-col">
+                <p th:text="#{adv.descr1}"></p>
+            </div>
         </div>
         <div class="acc">
             <div class="question-card">
@@ -505,10 +525,10 @@
         </div>
         <div id="contact-content">
             <div class="section-heading container-fluid row" id="contact-info">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-12 shift-col">
                     <h1 th:inline="text">[[#{contact.title1}]]<br><em th:text="#{contact.title2}"></em></h1>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6 shift-col">
                     <p th:inline="text">
                         [[#{contact.clock}]]
                         <br th:inline="text">[[#{contact.person}]]
@@ -516,7 +536,7 @@
                         info@istotschnik.org</a>
                     </p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm6 shift-col">
                     <p th:inline="text">
                         [[#{contact.tel}]]<a href="tel:+49-211-260 52 07"> +49-211-260 52 07</a>
                         <br th:inline="text">[[#{contact.mobile}]]<a href="tel:+49-176-244 82292"> +49-176-244 82292</a>
