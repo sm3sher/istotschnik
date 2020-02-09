@@ -1195,6 +1195,20 @@ blockquote:nth-of-type(even) footer:after {
 
 /* Responsive Style */
 
+@supports (-webkit-overflow-scrolling: touch) {
+    .Modern-Slider .PrevArrow {
+        width: 50px;
+        height: 50px;
+        margin-left: -40px;
+    }
+
+    .Modern-Slider .NextArrow {
+        width: 50px;
+        height: 50px;
+        margin-right: -40px;
+    }
+}
+
 @media (max-width: 992px) {
 
     .responsive-nav {
@@ -1246,8 +1260,6 @@ blockquote:nth-of-type(even) footer:after {
     }
 
     .Modern-Slider .NextArrow {
-        -webkit-appearance: none;
-        border-radius: 0;
         outline: none;
         display: none;
         position: absolute;
@@ -1270,8 +1282,6 @@ blockquote:nth-of-type(even) footer:after {
     }
 
     .Modern-Slider .PrevArrow {
-        -webkit-appearance: none;
-        border-radius: 0;
         outline: none;
         position: absolute;
         top: 120px;
