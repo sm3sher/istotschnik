@@ -4,10 +4,12 @@ import com.istotschnik.website.model.Contact;
 import com.istotschnik.website.service.MailServiceInterface;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.mail.MessagingException;
-import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 
 @Controller
@@ -24,15 +26,6 @@ public class WebsiteController {
     @GetMapping("/")
     public String mainPage() {
         return "index";
-    }
-
-    @RequestMapping(value = "/.well-known/acme-challenge/U3tgeSTDuX2Mb50MS4Bj1jfeCVmTYzGQ9WL6tLzRoso",
-            method = RequestMethod.GET)
-    @ResponseBody
-    public String certBot(HttpServletResponse response) {
-        response.setContentType("text/plain");
-        response.setCharacterEncoding("UTF-8");
-        return "U3tgeSTDuX2Mb50MS4Bj1jfeCVmTYzGQ9WL6tLzRoso.pBtT2AhjrL2ZSpy2bbkFctc3iHoOifqPWn7TZQ-FDI0";
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
