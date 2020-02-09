@@ -102,7 +102,7 @@
                 <li><a href="#top" th:text="#{home}"></a></li>
                 <li><a href="#imggallery" th:text="#{gallery}"></a></li>
                 <li th:if="__#{locale.lang}__=='ru'"><a href="#featured" th:text="#{poems}"></a></li>
-                <li><a href="#video" th:text="#{preach}"></a></li>
+                <li th:if="__#{locale.lang}__=='ru'"><a href="#video" th:text="#{preach}"></a></li>
                 <li><a href="#witness" th:text="#{witness}"></a></li>
                 <li><a href="#advice" th:text="#{advice}"></a></li>
                 <li><a href="#contact" th:text="#{contact}"></a></li>
@@ -151,7 +151,7 @@
                     [[#{poems}]]
                 </a>
             </li>
-            <li>
+            <li th:if="__#{locale.lang}__=='ru'">
                 <a href="#video" th:inline="text">
                     <span class="rect"></span>
                     <span class="circle"></span>
