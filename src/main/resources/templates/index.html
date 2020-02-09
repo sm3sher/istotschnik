@@ -75,6 +75,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/fontAwesome.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link href="css/owl-carousel.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -101,7 +102,7 @@
                 <li><a href="#top" th:text="#{home}"></a></li>
                 <li><a href="#imggallery" th:text="#{gallery}"></a></li>
                 <li th:if="__#{locale.lang}__=='ru'"><a href="#featured" th:text="#{poems}"></a></li>
-                <!--                <li><a href="#video" th:text="#{preach}"></a></li>-->
+                <li><a href="#video" th:text="#{preach}"></a></li>
                 <li><a href="#witness" th:text="#{witness}"></a></li>
                 <li><a href="#advice" th:text="#{advice}"></a></li>
                 <li><a href="#contact" th:text="#{contact}"></a></li>
@@ -150,7 +151,6 @@
                     [[#{poems}]]
                 </a>
             </li>
-            <!--
             <li>
                 <a href="#video" th:inline="text">
                     <span class="rect"></span>
@@ -158,7 +158,6 @@
                     [[#{preach}]]
                 </a>
             </li>
-            -->
             <li>
                 <a href="#witness" th:inline="text">
                     <span class="rect"></span>
@@ -335,23 +334,65 @@
             </div>
         </div>
     </section>
-    <!--    <section class="content-section" id="video" th:if="__#{locale.lang}__=='ru'">
-            <div class="section-heading container-fluid row justify-content-start">
-                <div class="col-lg-3 col-md-5 shift-col">
-                    <h1><em>Видео</em></h1>
-                </div>
-                <div class="col-lg-4 col-md-6 shift-col">
-                    <p th:inline="text">Учение в нашей церкви</p>
+    <section class="content-section" id="video" th:if="__#{locale.lang}__=='ru'">
+        <div class="section-heading container-fluid row justify-content-start">
+            <div class="col-lg-3 col-md-5 shift-col">
+                <h1><em>Видео</em></h1>
+            </div>
+            <div class="col-lg-4 col-md-6 shift-col">
+                <p th:inline="text">Учение в нашей церкви</p>
+            </div>
+        </div>
+        <div class="video-gallery">
+            <div class="gallery-item">
+                <img src="https://i.pinimg.com/originals/75/f9/97/75f997ee6acf59dc51bbea05eae36677.jpg"
+                     alt="North Cascades National Park"/>
+                <div class="gallery-item-caption">
+                    <div>
+                        <h2>Глобальное заблуждение</h2>
+                        <p>Миф о существовании верующих и неверующих людей</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=v8i1chHYgsM"></a>
                 </div>
             </div>
-            <div class="video-gallery">
-                <iframe src="https://www.youtube-nocookie.com/embed/ztnKrEJkAng" width="640" height="360" frameborder="0" allowfullscreen ></iframe>
-                <iframe src="https://www.youtube-nocookie.com/embed/qPCtugD5d-A" width="640" height="360" frameborder="0" allowfullscreen ></iframe>
-                <iframe src="https://www.youtube-nocookie.com/embed/hxeAlx4Hc2I" width="640" height="360" frameborder="0" allowfullscreen ></iframe>
-                <iframe src="https://www.youtube-nocookie.com/embed/v8i1chHYgsM" width="640" height="360" frameborder="0" allowfullscreen ></iframe>
+
+            <div class="gallery-item ">
+                <img src="https://cdn.davemorrowphotography.com/wp-content/uploads/2016/08/Mount-Rainier-Star-Photography-Workshops-and-Tours-Header-900x394.jpg"
+                     alt="Mt. Rainier"/>
+                <div class="gallery-item-caption">
+                    <div>
+                        <h2>Фрагмент воскресной проповеди</h2>
+                        <p>Чьи то мысли в моей голове</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=hxeAlx4Hc2I"></a>
+                </div>
             </div>
-        </section>
-    -->
+
+            <div class="gallery-item">
+                <img src="https://pixabay.com/get/52e8d4444d54aa14f1dc8460825668204022dfe05b50734c7c2978dc/the-alps-4817766_640.jpg"
+                     alt="Olympic National Park"/>
+                <div class="gallery-item-caption">
+                    <div>
+                        <h2>Характеристика Творца</h2>
+                        <p>TODO</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=qPCtugD5d-A"></a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://pixabay.com/get/55e0d7414352a414f1dc8460825668204022dfe05b50734c7d297fd2/mountain-3022908_640.jpg"
+                     alt=""/>
+                <div class="gallery-item-caption">
+                    <div>
+                        <h2>Смысл веры в Бога</h2>
+                        <p>Для чего человек верит в Бога?</p>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=ztnKrEJkAng"></a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="content-section" id="witness">
         <div class="section-heading container-fluid row justify-content-start">
             <div class="col-lg-4 col-md-5 shift-col">
@@ -451,7 +492,6 @@
                         <p th:text="#{witn4.p10}"></p>
                         <p th:text="#{witn4.p11}"></p>
                         <p th:text="#{witn4.p12}"></p>
-                        <p th:text="#{witn4.p13}"></p>
                     </div>
                 </section>
             </div>
@@ -611,6 +651,7 @@
 
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/magnific-popup_min.js"></script>
+<script src="js/lightbox.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 
