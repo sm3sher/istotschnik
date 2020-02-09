@@ -99,13 +99,15 @@
             <ul class="nav navbar-nav">
                 <li><a href="javascript:" onclick="gerRedirect()">deutsch</a>
                     <a href="javascript:" onclick="ruRedirect()">русский</a></li>
-                <li><a href="#top" th:text="#{home}"></a></li>
-                <li><a href="#imggallery" th:text="#{gallery}"></a></li>
-                <li th:if="__#{locale.lang}__=='ru'"><a href="#featured" th:text="#{poems}"></a></li>
-                <li th:if="__#{locale.lang}__=='ru'"><a href="#video" th:text="#{preach}"></a></li>
-                <li><a href="#witness" th:text="#{witness}"></a></li>
-                <li><a href="#advice" th:text="#{advice}"></a></li>
-                <li><a href="#contact" th:text="#{contact}"></a></li>
+                <li><a href="#top" data-target="#main-nav" data-toggle="collapse" th:text="#{home}"></a></li>
+                <li><a href="#imggallery" data-target="#main-nav" data-toggle="collapse" th:text="#{gallery}"></a></li>
+                <li th:if="__#{locale.lang}__=='ru'"><a href="#featured" data-target="#main-nav" data-toggle="collapse"
+                                                        th:text="#{poems}"></a></li>
+                <li th:if="__#{locale.lang}__=='ru'"><a href="#video" data-target="#main-nav" data-toggle="collapse"
+                                                        th:text="#{preach}"></a></li>
+                <li><a href="#witness" data-target="#main-nav" data-toggle="collapse" th:text="#{witness}"></a></li>
+                <li><a href="#advice" data-target="#main-nav" data-toggle="collapse" th:text="#{advice}"></a></li>
+                <li><a href="#contact" data-target="#main-nav" data-toggle="collapse" th:text="#{contact}"></a></li>
             </ul>
         </nav>
     </div>
