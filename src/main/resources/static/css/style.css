@@ -1246,6 +1246,8 @@ blockquote:nth-of-type(even) footer:after {
     }
 
     .Modern-Slider .NextArrow {
+        -webkit-appearance: none;
+        border-radius: 0;
         outline: none;
         display: none;
         position: absolute;
@@ -1268,6 +1270,8 @@ blockquote:nth-of-type(even) footer:after {
     }
 
     .Modern-Slider .PrevArrow {
+        -webkit-appearance: none;
+        border-radius: 0;
         outline: none;
         position: absolute;
         top: 120px;
