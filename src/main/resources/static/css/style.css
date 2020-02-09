@@ -1285,6 +1285,14 @@ blockquote:nth-of-type(even) footer:after {
 
 @media (max-width: 690px) {
 
+    .Modern-Slider .info h1 {
+        font-size: 42px;
+    }
+
+    .Modern-Slider .info p {
+        font-size: 16px;
+    }
+
     .section-heading p {
         position: relative;
     }
@@ -1347,6 +1355,14 @@ blockquote:nth-of-type(even) footer:after {
 }
 
 @media (max-width: 339px) {
+
+    .Modern-Slider .info h1 {
+        font-size: 38px;
+    }
+
+    .Modern-Slider .info p {
+        font-size: 16px;
+    }
 
     #witness .nav-tabs a {
         font-size: 10px;
