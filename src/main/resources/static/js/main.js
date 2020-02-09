@@ -148,4 +148,23 @@ jQuery(document).ready(function ($) {
         }, 500);
     });
 
+    $(document).ready(function () {
+        $('.popup-gallery').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            tLoading: "",
+            mainClass: 'mfp-with-zoom',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [1, 2] // Will preload 1 - before current, and 2 after the current image
+            },
+            zoom: {
+                enabled: true, // By default it's false, so don't forget to enable it
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out', // CSS transition easing function
+            }
+        });
+    });
+
 });

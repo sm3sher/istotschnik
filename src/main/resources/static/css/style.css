@@ -736,29 +736,13 @@ header {
 
 /* Video Presentation Style */
 
-.video-galery iframe {
+.video-gallery iframe {
     max-width: 100%;
 }
 
 #video {
-    text-align: center;
     background-color: #f4f4f4;
     padding: 100px 60px;
-}
-
-#video .section-heading {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-#video .section-heading h1 {
-    display: block;
-    margin: 0px;
-}
-
-#video .section-heading p {
-    position: relative;
-    margin: 0px;
 }
 
 #video .accent-button {
