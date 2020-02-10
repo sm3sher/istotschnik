@@ -350,7 +350,8 @@ header {
 }
 
 .Modern-Slider .info {
-    margin-left: 25%;text-align: right;
+    margin-left: 25%;
+    text-align: right;
     position: absolute;
     z-index: 10;
     top: 50%;

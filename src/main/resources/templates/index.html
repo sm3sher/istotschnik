@@ -76,7 +76,7 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/fontAwesome.css" rel="stylesheet">
     <link href="css/lightbox.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link href="css/magnific-popup.css" rel="stylesheet">
     <link href="css/owl-carousel.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
@@ -99,15 +99,15 @@
             <ul class="nav navbar-nav">
                 <li><a href="javascript:" onclick="gerRedirect()">deutsch</a>
                     <a href="javascript:" onclick="ruRedirect()">русский</a></li>
-                <li><a href="#top" data-target="#main-nav" data-toggle="collapse" th:text="#{home}"></a></li>
-                <li><a href="#imggallery" data-target="#main-nav" data-toggle="collapse" th:text="#{gallery}"></a></li>
-                <li th:if="__#{locale.lang}__=='ru'"><a href="#featured" data-target="#main-nav" data-toggle="collapse"
+                <li><a data-target="#main-nav" data-toggle="collapse" href="#top" th:text="#{home}"></a></li>
+                <li><a data-target="#main-nav" data-toggle="collapse" href="#imggallery" th:text="#{gallery}"></a></li>
+                <li th:if="__#{locale.lang}__=='ru'"><a data-target="#main-nav" data-toggle="collapse" href="#featured"
                                                         th:text="#{poems}"></a></li>
-                <li th:if="__#{locale.lang}__=='ru'"><a href="#video" data-target="#main-nav" data-toggle="collapse"
+                <li th:if="__#{locale.lang}__=='ru'"><a data-target="#main-nav" data-toggle="collapse" href="#video"
                                                         th:text="#{preach}"></a></li>
-                <li><a href="#witness" data-target="#main-nav" data-toggle="collapse" th:text="#{witness}"></a></li>
-                <li><a href="#advice" data-target="#main-nav" data-toggle="collapse" th:text="#{advice}"></a></li>
-                <li><a href="#contact" data-target="#main-nav" data-toggle="collapse" th:text="#{contact}"></a></li>
+                <li><a data-target="#main-nav" data-toggle="collapse" href="#witness" th:text="#{witness}"></a></li>
+                <li><a data-target="#main-nav" data-toggle="collapse" href="#advice" th:text="#{advice}"></a></li>
+                <li><a data-target="#main-nav" data-toggle="collapse" href="#contact" th:text="#{contact}"></a></li>
             </ul>
         </nav>
     </div>
@@ -352,8 +352,8 @@
         </div>
         <div class="video-gallery">
             <div class="gallery-item">
-                <img src="https://i.pinimg.com/originals/75/f9/97/75f997ee6acf59dc51bbea05eae36677.jpg"
-                     alt="North Cascades National Park"/>
+                <img alt="North Cascades National Park"
+                     src="https://i.pinimg.com/originals/75/f9/97/75f997ee6acf59dc51bbea05eae36677.jpg"/>
                 <div class="gallery-item-caption">
                     <div>
                         <h2>Глобальное заблуждение</h2>
@@ -364,8 +364,8 @@
             </div>
 
             <div class="gallery-item ">
-                <img src="https://cdn.davemorrowphotography.com/wp-content/uploads/2016/08/Mount-Rainier-Star-Photography-Workshops-and-Tours-Header-900x394.jpg"
-                     alt="Mt. Rainier"/>
+                <img alt="Mt. Rainier"
+                     src="https://cdn.davemorrowphotography.com/wp-content/uploads/2016/08/Mount-Rainier-Star-Photography-Workshops-and-Tours-Header-900x394.jpg"/>
                 <div class="gallery-item-caption">
                     <div>
                         <h2>Фрагмент воскресной проповеди</h2>
@@ -376,8 +376,8 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://pixabay.com/get/52e8d4444d54aa14f1dc8460825668204022dfe05b50734c7c2978dc/the-alps-4817766_640.jpg"
-                     alt="Olympic National Park"/>
+                <img alt="Olympic National Park"
+                     src="https://pixabay.com/get/52e8d4444d54aa14f1dc8460825668204022dfe05b50734c7c2978dc/the-alps-4817766_640.jpg"/>
                 <div class="gallery-item-caption">
                     <div>
                         <h2>Характеристика Творца</h2>
@@ -388,8 +388,8 @@
             </div>
 
             <div class="gallery-item">
-                <img src="https://pixabay.com/get/55e0d7414352a414f1dc8460825668204022dfe05b50734c7d297fd2/mountain-3022908_640.jpg"
-                     alt=""/>
+                <img alt=""
+                     src="https://pixabay.com/get/55e0d7414352a414f1dc8460825668204022dfe05b50734c7d297fd2/mountain-3022908_640.jpg"/>
                 <div class="gallery-item-caption">
                     <div>
                         <h2>Смысл веры в Бога</h2>
@@ -412,10 +412,10 @@
         <div class="section-content">
             <div class="tabs-content">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a href="#tab1" data-toggle="tab" th:text="#{witn1.autor}"></a></li>
-                    <li><a href="#tab2" data-toggle="tab" th:text="#{witn2.autor}"></a></li>
-                    <li><a href="#tab3" data-toggle="tab" th:text="#{witn3.autor}"></a></li>
-                    <li><a href="#tab4" data-toggle="tab" th:text="#{witn4.autor}"></a></li>
+                    <li class="active"><a data-toggle="tab" href="#tab1" th:text="#{witn1.autor}"></a></li>
+                    <li><a data-toggle="tab" href="#tab2" th:text="#{witn2.autor}"></a></li>
+                    <li><a data-toggle="tab" href="#tab3" th:text="#{witn3.autor}"></a></li>
+                    <li><a data-toggle="tab" href="#tab4" th:text="#{witn4.autor}"></a></li>
                 </ul>
                 <section class="tab-content">
                     <div class="tab-pane active" id="tab1">
@@ -462,9 +462,9 @@
                         <div class="clearfix">
                             <img alt="" class="img-responsive pull-right col-xs-12 col-sm-6 col-md-4 col-lg-2"
                                  src="img/Zeugnisse/yuriy.png">
-                            <p th:text="#{witn3.p1}" class="bold-text"></p>
+                            <p class="bold-text" th:text="#{witn3.p1}"></p>
                             <p th:text="#{witn3.p2}"></p>
-                            <p th:text="#{witn3.p3}" class="bold-text"></p>
+                            <p class="bold-text" th:text="#{witn3.p3}"></p>
                             <p th:text="#{witn3.p4}"></p>
                             <p th:text="#{witn3.p5}"></p>
                         </div>
@@ -476,11 +476,11 @@
                         <p th:text="#{witn3.p11}"></p>
                         <p th:text="#{witn3.p12}"></p>
                         <p th:text="#{witn3.p13}"></p>
-                        <p th:text="#{witn3.p14}" class="bold-text"></p>
+                        <p class="bold-text" th:text="#{witn3.p14}"></p>
                         <p th:text="#{witn3.p15}"></p>
-                        <p th:text="#{witn3.p16}" class="bold-text"></p>
+                        <p class="bold-text" th:text="#{witn3.p16}"></p>
                         <p th:text="#{witn3.p17}"></p>
-                        <p th:text="#{witn3.p18}" class="bold-text"></p>
+                        <p class="bold-text" th:text="#{witn3.p18}"></p>
                     </div>
                     <div class="tab-pane" id="tab4">
                         <div class="clearfix">
@@ -623,13 +623,13 @@
                         </div>
                         <div class="col-md-12">
                             <div class="alert alert-success" th:if="${msg}=='success'" th:inline="text">
-                                <a type="button" class="close">&times;</a>
+                                <a class="close" type="button">&times;</a>
                                 <i class="fa fa-check"></i>
                                 <strong th:text="#{form.success}"></strong>
                                 [[#{form.success.msg}]]
                             </div>
                             <div class="alert alert-danger" th:if="${msg}=='error'" th:inline="text">
-                                <a type="button" class="close">&times;</a>
+                                <a class="close" type="button">&times;</a>
                                 <i class="fa fa-warning"></i>
                                 <strong th:text="#{form.error}"></strong>
                                 [[#{form.error.msg}]]
@@ -638,8 +638,8 @@
                     </div>
                 </form>
                 <script type="text/javascript">
-                    (function($) {
-                        $('.alert .close ').click(function() {
+                    (function ($) {
+                        $('.alert .close ').click(function () {
                             $(this).parent().fadeOut();
                         });
                     })(jQuery);
@@ -648,8 +648,10 @@
         </div>
     </section>
     <section class="footer">
-        <p>Copyright &copy; 2020 Istotschnik e.V. <wbr>
-            Design:&nbsp;R.&nbsp;Jumatov</p>
+        <p>Copyright &copy; 2020 Istotschnik e.V.
+            <wbr>
+            Design:&nbsp;R.&nbsp;Jumatov
+        </p>
     </section>
 </div>
 
