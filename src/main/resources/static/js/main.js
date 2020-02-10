@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
 
     $('.tab-content > div').hide();
     $('.tab-content > div:first-of-type').show();
-    $('.nav-tabs a').click(function (e) {
+    $('.nav-tabs a').on('click', function (e) {
         e.preventDefault();
         let $this = $(this),
             others = $this.closest('li').siblings().children('a'),
@@ -37,7 +37,7 @@ jQuery(document).ready(function ($) {
         $(target).show();
     });
 
-    $(".box-video").click(function () {
+    $(".box-video").on('click', function () {
         $('iframe', this)[0].src += "&amp;autoplay=1";
         $(this).addClass('open');
     });
@@ -107,7 +107,7 @@ jQuery(document).ready(function ($) {
 
 
     $(function () {
-        $('.question-title').click(function (j) {
+        $('.question-title').on('click', function (j) {
 
             var dropDown = $(this).closest('.question-card').find('.question-panel');
             $(this).closest('.acc').find('.question-panel').not(dropDown).slideUp();
@@ -124,17 +124,17 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $("#goto1").click(function () {
+    $("#goto1").on('click', function () {
         $("#to1").click();
     });
 
-    $("#goto2").click(function () {
+    $("#goto2").on('click', function () {
         $("#to2").click();
     });
 
     const target = $(".img-responsive").offset().top + 700;
     let beyond = $("#advice").offset().top - 800; // Beyond point is dynamic due to different tabs
-    $(window).scroll(function () {
+    $(window).on('scroll', function () {
         if ($(window).scrollTop() >= target && $(window).scrollTop() <= beyond) {
             $('#goback-to-witness').fadeIn(200);    // Fade in the arrow
             beyond = $("#advice").offset().top - 800;
@@ -142,7 +142,7 @@ jQuery(document).ready(function ($) {
             $('#goback-to-witness').fadeOut(200);   // Else fade out the arrow
         }
     });
-    $('#goback-to-witness').click(function () {
+    $('#goback-to-witness').on('click', function () {
         $('body,html').animate({
             scrollTop: $("#witness").offset().top    // Scroll to top section
         }, 500);

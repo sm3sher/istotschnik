@@ -81,7 +81,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
-    <script src="http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
 
 </head>
 
@@ -634,7 +634,7 @@
                 </form>
                 <script type="text/javascript">
                     (function ($) {
-                        $('.alert .close ').click(function () {
+                        $('.alert .close ').on("click", function () {
                             $(this).parent().fadeOut();
                         });
                     })(jQuery);
@@ -665,7 +665,7 @@
     const delta = 5;
     let navbarHeight = $("header").outerHeight();
 
-    $(window).scroll(function (event) {
+    $(window).on("scroll", function (event) {
         didScroll = true;
     });
 
