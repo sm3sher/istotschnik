@@ -193,8 +193,7 @@ header {
 }
 
 #locales {
-    padding-top: 45px;
-    padding-bottom: 10px;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -208,9 +207,8 @@ header {
     position: absolute;
     width: 100%;
     height: auto;
-    line-height: 100px;
     background: whitesmoke;
-    padding: 20px;
+    padding: 10px;
 }
 
 .sidebar-navigation .logo img {
@@ -220,7 +218,7 @@ header {
 
 .sidebar-navigation nav {
     position: relative;
-    top: 60%;
+    top: 65%;
     left: 60%;
     -webkit-transform: translateX(-60%) translateY(-60%);
     -moz-transform: translateX(-60%) translateY(-60%);
