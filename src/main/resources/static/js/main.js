@@ -167,6 +167,16 @@ jQuery(document).ready(function ($) {
         });
     });
 
+    $('.image-link').magnificPopup({
+        type: 'image',
+        mainClass: 'mfp-with-zoom',
+        zoom: {
+            enabled: true,
+            duration: 300,
+            easing: 'ease-in-out'
+        }
+    });
+
     $(document).ready(function () {
         $('.video-gallery').magnificPopup({
             delegate: 'a',
