@@ -1,13 +1,13 @@
 package com.istotschnik.website.web;
 
 import com.istotschnik.website.model.Contact;
+import com.istotschnik.website.model.ReCaptchaResponse;
 import com.istotschnik.website.service.MailServiceInterface;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.mail.MessagingException;
 import java.util.Locale;
@@ -16,11 +16,15 @@ import java.util.Locale;
 public class WebsiteController {
 
     private final MailServiceInterface mailService;
-    private final String[] gerMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
-    private final String[] ruMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
+    private final RestTemplate restTemplate;
+//    private final String[] gerMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
+    private final String[] gerMails = {"anime.provider2016@gmail.com"};
+//    private final String[] ruMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
+    private final String[] ruMails = {"roman.jum99@gmail.com"};
 
-    public WebsiteController(MailServiceInterface mailService) {
+    public WebsiteController(MailServiceInterface mailService, RestTemplate restTemplate) {
         this.mailService = mailService;
+        this.restTemplate = restTemplate;
     }
 
     @GetMapping("/")
@@ -29,16 +33,25 @@ public class WebsiteController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public String send(@ModelAttribute("form") Contact contact, Model model, Locale locale) {
-        try {
-            if (locale.toString().contains("de")) {
-                mailService.sendToGerAddresses(gerMails, contact);
-            } else {
-                mailService.sendToRuAddresses(ruMails, contact);
+    public String send(@ModelAttribute("form") Contact contact, Model model, Locale locale,
+                       @RequestParam(name="g-recaptcha-response") String captchaResponse) {
+        String url = "https://www.google.com/recaptcha/api/siteverify";
+        String params = "?secret=6LezNPgUAAAAAIKmmggLTz-wjVkzBMxtKZVEjgqB&response="+captchaResponse;
+        ReCaptchaResponse reCaptchaResponse = restTemplate.exchange(url+params, HttpMethod.POST, null, ReCaptchaResponse.class).getBody();
+        if (reCaptchaResponse.isSuccess()) {
+            try {
+                if (locale.toString().contains("de")) {
+                    mailService.sendToGerAddresses(gerMails, contact);
+                } else {
+                    mailService.sendToRuAddresses(ruMails, contact);
+                }
+                model.addAttribute("msg", "success");
+            } catch (MessagingException e) {
+                model.addAttribute("msg", "error");
             }
-            model.addAttribute("msg", "success");
-        } catch (MessagingException e) {
-            model.addAttribute("msg", "error");
+        }
+        else {
+            model.addAttribute("msg", "captcha");
         }
         return "index";
     }
