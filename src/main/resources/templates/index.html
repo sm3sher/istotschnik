@@ -79,6 +79,7 @@
     <link href="css/owl-carousel.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 
+    <script async defer src="https://www.google.com/recaptcha/api.js"></script>
     <script defer src="js/plugins.min.js"></script>
 
 </head>
@@ -619,7 +620,10 @@
                                           rows="6" th:placeholder="#{form.message}"></textarea>
                             </fieldset>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-4">
+                            <div class="g-recaptcha" data-theme="light" style="transform:scale(0.87);transform-origin:0 0" data-sitekey="6LezNPgUAAAAABgyNUDVritOGRu5PH7qcrjt0K6n"></div>
+                        </div>
+                        <div class="col-md-8">
                             <fieldset>
                                 <button class="btn" id="form-submit" th:text="#{form.send}" type="submit"></button>
                             </fieldset>
@@ -636,6 +640,12 @@
                                 <i class="fa fa-warning"></i>
                                 <strong th:text="#{form.error}"></strong>
                                 [[#{form.error.msg}]]
+                            </div>
+                            <div class="alert alert-danger" th:if="${msg}=='captcha'" th:inline="text">
+                                <a class="close" type="button">&times;</a>
+                                <i class="fa fa-warning"></i>
+                                <strong th:text="#{form.error}"></strong>
+                                [[#{form.captcha.msg}]]
                             </div>
                         </div>
                     </div>
