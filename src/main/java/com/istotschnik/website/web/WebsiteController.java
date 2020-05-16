@@ -17,10 +17,8 @@ public class WebsiteController {
 
     private final MailServiceInterface mailService;
     private final RestTemplate restTemplate;
-//    private final String[] gerMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
-    private final String[] gerMails = {"anime.provider2016@gmail.com"};
-//    private final String[] ruMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
-    private final String[] ruMails = {"roman.jum99@gmail.com"};
+    private final String[] gerMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
+    private final String[] ruMails = {"roman.jum99@gmail.com", "owhstang@gmail.com", "stschastliviy@gmail.com"};
 
     public WebsiteController(MailServiceInterface mailService, RestTemplate restTemplate) {
         this.mailService = mailService;
